@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/nmany/vs projct/dz/build",
+  "command": "/usr/bin/c++ -g -o CMakeFiles/dz.dir/HW.cxx.o -c \"/home/nmany/vs projct/dz/HW.cxx\"",
+  "file": "/home/nmany/vs projct/dz/HW.cxx",
+  "output": "CMakeFiles/dz.dir/HW.cxx.o"
+}
+]
