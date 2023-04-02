@@ -1,5 +1,9 @@
 #include <iostream>
 
-int main(int, char**) {
-    std::cout << "Hello! world!\n";
+using namespace std;
+
+int main(int, char**)
+{
+    cout << "Hello! world!" << endl;
+    return cout.fail();
 }
