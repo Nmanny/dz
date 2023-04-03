@@ -23,5 +23,5 @@ set_target_properties(hw_shared PROPERTIES LIBRARY_OUTPUT_DIRECTORY
                                            "${CMAKE_BINARY_DIR}/bin/lib")
 if(WIN32)
     set_target_properties(hw_static PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS 1)
-    set_target_properties(hw_dynamic PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS 1)
+    set_target_properties(hw_shared PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS 1)
 endif()
