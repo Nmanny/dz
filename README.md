@@ -1,2 +1,2 @@
 # -_-
-![build](https://github.com/Nmanny/dz/actions/workflows/build.yml/badge.svg)
+![main](https://github.com/Nmanny/dz/actions/workflows/main.yml/badge.svg)
