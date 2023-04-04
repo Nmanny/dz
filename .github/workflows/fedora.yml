@@ -1,0 +1,30 @@
+name: fedora
+
+on:
+push:
+branches: [ main ]
+pull_request:
+branches: [ main ]
+
+jobs:
+build:
+runs-on: fedora-latest
+
+steps:
+- name: Checkout code
+  uses: actions/checkout@v2
+
+- name: Install dependencies
+  run: sudo dnf install -y cmake make gcc-c++
+
+- name: Build project
+  run: |
+    mkdir build
+    cd build
+    cmake ..
+    make
+
+- name: Run tests
+  run: |
+    cd build
+    ctest
