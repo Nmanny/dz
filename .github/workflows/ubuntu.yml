@@ -14,11 +14,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up C++ build environment
-      uses: actions/setup-cpp@v2
-      with:
-        cpp-version: '17'
-        compiler: 'clang'
+#     - name: Set up C++ build environment
+#       uses: actions/setup-cpp@v2
+#       with:
+#         cpp-version: '17'
+#         compiler: 'clang'
 
     - name: Build project
       run: |
