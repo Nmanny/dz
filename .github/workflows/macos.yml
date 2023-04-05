@@ -1,4 +1,4 @@
-name: macos
+name: macOS
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     - name: Install CMake and SDL
       run: |
         brew update
-        brew install cmake sdl2
+        brew install cmake sdl2 sdl2_ttf
 
     - name: Build project
       run: |
@@ -30,3 +30,18 @@ jobs:
       run: |
         cd build
         ctest
+
+    - name: Run program 1
+      run: |
+        cd build
+        cd bin
+        ./dz
+        ./hello_dynamic
+        ./hello_static
+
+    - name: Run program 2
+      run: |
+        cd build
+        cd bin
+        ./sdl_shared
+        ./sdl_static
