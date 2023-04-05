@@ -14,10 +14,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install CMake
+    - name: Install CMake and SDL
       run: |
         brew update
-        brew install cmake
+        brew install cmake sdl2
 
     - name: Build project
       run: |
