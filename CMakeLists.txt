@@ -1,4 +1,5 @@
 add_subdirectory(homework1)
+add_subdirectory(homework2)
 
 include(CTest)
 add_test(NAME return_0 COMMAND dz)
