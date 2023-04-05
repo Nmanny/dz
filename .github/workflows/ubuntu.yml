@@ -17,7 +17,7 @@ jobs:
     - name: Install CMake and SDL
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake libsdl2-dev
+        sudo apt-get install -y cmake libsdl2-dev libsdl2-ttf-dev
 
     - name: Build project
       run: |
@@ -30,3 +30,18 @@ jobs:
       run: |
         cd build
         ctest
+        
+    - name: Run program 1
+      run: |
+        cd build
+        cd bin
+        ./dz
+        ./hello_dynamic
+        ./hello_static
+        
+    - name: Run program 2
+      run: |
+        cd build
+        cd bin
+        ./sdl_shared
+        ./sdl_static
