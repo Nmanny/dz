@@ -6,6 +6,6 @@ target_compile_features(sdl_static PUBLIC cxx_std_20)
 
 find_package(SDL3 REQUIRED)
 
-target_link_libraries(sdl_static PRIVATE SDL3::SDL3-shared)
+target_link_libraries(sdl_static PRIVATE SDL3::SDL3-static)
 set_target_properties(sdl_static PROPERTIES RUNTIME_OUTPUT_DIRECTORY
                                             "${CMAKE_BINARY_DIR}/bin")
