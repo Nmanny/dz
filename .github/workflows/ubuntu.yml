@@ -21,11 +21,12 @@ jobs:
         sudo apt install git
         git clone https://github.com/libsdl-org/SDL.git
         cd SDL
-        
-        sudo cmake -S . -B build 
-        sudo cmake -DSDL_STATIC_ENABLED_BY_DEFAULT=ON ..
-        sudo cmake --build build 
-        sudo cmake --install build
+        mkdir build
+        cd build
+        sudo cmake -DSDL_STATIC_ENABLED_BY_DEFAULT=ON -DSDL_SHARED_ENABLED_BY_DEFAULT=ON ..
+        sudo cmake --build .
+        sudo cmake --install .
+
 
     - name: Build project
       run: |
