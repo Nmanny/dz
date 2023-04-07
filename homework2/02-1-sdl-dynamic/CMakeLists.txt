@@ -10,7 +10,12 @@ if(SDL3_FOUND)
     target_link_libraries(sdl_dynamic PRIVATE SDL3::SDL3-shared)
 else()
     find_package(SDL2 REQUIRED)
-    target_link_libraries(sdl_dynamic PRIVATE SDL2::SDL2 SDL2::SDL2main)
+    if(APPLE)
+        include_directories(${SDL2_INCLUDE_DIRS})
+        target_link_libraries(sdl_static ${SDL2_LIBRARIES})
+    else()
+        target_link_libraries(sdl_dynamic PRIVATE SDL2::SDL2 SDL2::SDL2main)
+    endif()
 endif()
 
 set_target_properties(sdl_dynamic PROPERTIES RUNTIME_OUTPUT_DIRECTORY
