@@ -17,9 +17,11 @@ jobs:
     - name: Install CMake and SDL
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake libsdl2-dev libsdl2-ttf-dev
-        
-
+        sudo apt-get install -y cmake 
+        sudo apt install git
+        git clone https://github.com/libsdl-org/SDL.git
+        cd SDL
+        cmake -S . -B build && cmake --build build && cmake --install build
 
     - name: Build project
       run: |
