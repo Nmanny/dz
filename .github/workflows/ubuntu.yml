@@ -21,7 +21,9 @@ jobs:
         sudo apt install git
         git clone https://github.com/libsdl-org/SDL.git
         cd SDL
-        sudo cmake -S . -B build && cmake --build build && cmake --install build
+        sudo cmake -S . -B build 
+        sudo cmake --build build 
+        sudo cmake --install build
 
     - name: Build project
       run: |
