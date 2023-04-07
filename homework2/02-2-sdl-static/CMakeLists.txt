@@ -10,9 +10,7 @@ if(SDL3_FOUND)
     target_link_libraries(sdl_static PRIVATE SDL3::SDL3-static)
 else()
     find_package(SDL2 REQUIRED)
-    include_directories(${SDL2_INCLUDE_DIRS})
-    target_link_libraries(sdl_static PRIVATE ${SDL2_STATIC_LIBRARIES}
-                                             SDL2::SDL2main)
+    target_link_libraries(sdl_static PRIVATE SDL2::SDL2-static SDL2::SDL2main)
 endif()
 set_target_properties(sdl_static PROPERTIES RUNTIME_OUTPUT_DIRECTORY
                                             "${CMAKE_BINARY_DIR}/bin")
