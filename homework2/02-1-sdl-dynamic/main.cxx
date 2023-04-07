@@ -6,12 +6,6 @@ int main()
 {
     using namespace std;
 
-    if (SDL_Init(SDL_INIT_VIDEO) != 0)
-    {
-        cout << "SDL initialization failed: " << SDL_GetError() << endl;
-        return 1;
-    }
-
     SDL_version compiled;
     SDL_version linked;
 
