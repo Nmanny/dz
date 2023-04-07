@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 project(sdl_static_lib)
 
-include(FetchContent)
-fetchcontent_declare(SDL3 GIT_REPOSITORY https://github.com/libsdl-org/SDL.git)
-fetchcontent_makeavailable(SDL3)
-
 add_executable(sdl_static main.cxx)
 target_compile_features(sdl_static PUBLIC cxx_std_20)
 
