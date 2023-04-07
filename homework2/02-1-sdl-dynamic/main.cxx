@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include <SDL2/SDL.h>
+#include <SDL2/SDL_version.h>
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
     SDL_GetVersion(&linked);
     cout << "Compiled SDL version: " << (int)compiled.major << "."
          << (int)compiled.minor << "." << (int)compiled.patch << endl;
-    cout << "Linked SDL version: " << (int)linked.major << "."
+    cout << "Linked SDLd version: " << (int)linked.major << "."
          << (int)linked.minor << "." << (int)linked.patch << endl;
     return cout.good();
 }
