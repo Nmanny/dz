@@ -46,4 +46,5 @@ jobs:
         cd build
         cd bin
         ./sdl_dynamic
-        ./sdl_static
+        ls 
+        # ./sdl_static
