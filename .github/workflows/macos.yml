@@ -43,5 +43,5 @@ jobs:
       run: |
         cd build
         cd bin
-        ./sdl_shared
+        ./sdl_dynamic
         ./sdl_static
