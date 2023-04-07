@@ -45,6 +45,5 @@ jobs:
       run: |
         cd build
         cd bin
-        ./sdl_dynamic
         ls 
         
