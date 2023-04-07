@@ -24,8 +24,8 @@ jobs:
         mkdir build
         cd build
         sudo cmake -DSDL_STATIC_ENABLED_BY_DEFAULT=ON -DSDL_SHARED_ENABLED_BY_DEFAULT=ON ..
-        sudo cmake --build .
-        sudo cmake --install .
+        make
+        sudo make install
 
 
     - name: Build project
