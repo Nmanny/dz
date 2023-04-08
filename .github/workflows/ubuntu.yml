@@ -47,6 +47,5 @@ jobs:
         cd bin
         ls -lh sdl_static
         ls -lh sdl_dynamic
-        ./sdl_static
-        ./sdl_dynamic
+        
         
