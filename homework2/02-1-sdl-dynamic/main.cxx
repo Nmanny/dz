@@ -1,9 +1,9 @@
 #include <iostream>
 
-#ifdef SDL3
-#include <SDL2/SDL_version.h>
-#else
+#if __has_include(<SDL_version.h>)
 #include <SDL3/SDL_version.h>
+#else
+#include <SDL2/SDL_version.h>
 #endif
 
 int main()
