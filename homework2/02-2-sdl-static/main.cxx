@@ -1,7 +1,11 @@
 #include <iostream>
 
+// #include <SDL2/SDL_version.h>
+#ifdef SDL3
 #include <SDL2/SDL_version.h>
-
+#else
+#include <SDL3/SDL_version.h>
+#endif
 int main()
 {
     using namespace std;
