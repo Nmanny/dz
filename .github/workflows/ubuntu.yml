@@ -14,12 +14,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install CMake and SDL
+    - name: Install CMake and SDL2
       run: |
         sudo apt-get update
         sudo apt-get install -y cmake libsdl2-dev 
         
-
+    - name: Install SDL3
+      run: |
+        git clone https://github.com/libsdl-org/SDL
+        cd SDL
+        mkdir build
+        cd build
+        cmake .. -DSDL_SHARED=ON -DSDL_STATIC=ON
+        cmake --build .
+        sudo cmake --install .
 
     - name: Build project
       run: |
