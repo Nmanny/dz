@@ -25,7 +25,7 @@ jobs:
         cd SDL
         mkdir build
         cd build
-        cmake .. -DSDL_SHARED=ON -DSDL_STATIC=ON
+        cmake .. -DSDL_STATIC=ON
         cmake --build .
         sudo cmake --install .
 
