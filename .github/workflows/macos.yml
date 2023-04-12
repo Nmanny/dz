@@ -20,6 +20,7 @@ jobs:
 
     - name: Install SDL3
       run: |
+        brew install cmake sdl2
         git clone https://github.com/libsdl-org/SDL
         cd SDL
         mkdir build
