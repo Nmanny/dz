@@ -75,8 +75,8 @@ public:
     }
 };
 
-engine::~engine() = default;
-
+engine::~engine()     = default;
+bool    already_exist = false;
 engine* create_engine()
 {
     if (already_exist)
