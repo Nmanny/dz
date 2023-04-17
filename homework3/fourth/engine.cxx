@@ -4,6 +4,7 @@
 #include <iostream>
 #include <memory>
 #include <thread>
+#include <SDL3/SDL.h>
 
 namespace nn
 {
